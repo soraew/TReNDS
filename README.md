@@ -5,9 +5,9 @@ kaggleで初めて参加した(solo)TReNDSコンペ（脳の活性の仕方か�
 テーブルデータのみを使用。
 
 Ridge, Elastic-Net, SVRを1st stage modelとして、
-それらの予測の重み付平均をLightGBMを2nd stage modelとしてスタッキングして学習したもの。
+それらの予測の重み付平均をLightGBMを2nd stage model(meta model)としてスタッキングして学習したもの。
 
-SVRはsklearnのものに比べてNVIDIAのcumlのものの方が倍速かった為、そちらを使用。
+SVRはsklearnのものに比べてNVIDIAのcumlのものの方が数倍速かった為、そちらを使用。
 
 ----
 
@@ -15,7 +15,7 @@ Code I wrote for the first kaggle competition, TReNDS neuroimaging that I partic
 I participated solo.
 I only used the table data.
 
-Used Ridge, Elastic-Net, SVR as 1st stage model and stacked LightGBM as 2nd stage model on top of the weighted average of their predictions.
+Used Ridge, Elastic-Net, SVR as 1st stage model and stacked LightGBM as 2nd stage model(meta model) on top of the weighted average of their predictions.
 
 I used SVR from rapids cuml library because it was several times faster than that of the sklearn library.
 
